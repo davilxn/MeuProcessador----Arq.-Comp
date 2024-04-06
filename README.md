@@ -4,7 +4,7 @@
 
 ## Introdução
 
-O objetivo deste relatório é documentar a implementação de um processador pipelined para realizar o produto de matrizes 3x3. O processador foi projetado utilizando os fundamentos do pipelining e implementado no software Logisim. O código para controlar o processador foi escrito em linguagem assembly MIPS.
+O objetivo deste relatório é documentar a implementação de um processador pipelined para realizar o produto de matrizes 2x2. O processador foi projetado utilizando os fundamentos do pipelining e implementado no software Logisim. O código para controlar o processador foi escrito em linguagem assembly MIPS.
 
 ## Visão Geral do Pipelining
 
@@ -60,9 +60,9 @@ No que diz respeito à estrutura de pipelining, este processador segue uma arqui
 
 A arquitetura pipeline permite que múltiplas instruções sejam executadas simultaneamente em diferentes estágios do pipeline, aumentando assim a vazão de instruções executadas do processador.
 
-## Implementação do Produto de Matrizes 3x3
+## Implementação do Produto de Matrizes 2x2
 
-O código assembly MIPS foi desenvolvido para realizar o produto de matrizes 3x3. O algoritmo implementa a multiplicação de matrizes, seguindo o algoritmo tradicional, implementado no programa assembly MIPS anexado no pacote de códigos deste mesmo repositório.
+O código assembly MIPS foi desenvolvido para realizar o produto de matrizes 2x2. O algoritmo implementa a multiplicação de matrizes, seguindo o algoritmo tradicional, implementado no programa assembly MIPS anexado no pacote de códigos deste mesmo repositório.
 
 ## Instruções Implementadas
 
@@ -116,6 +116,16 @@ O restante das colunas referem-se às saídas da UC, isto é, os sinais de contr
 - **ULASrc**: Bit de controle que indica se um dos valores utilizados pela ULA em uma operação aritmética será proveniente do banco de registradores ou será um valor imediato (constante).
 - **bubble**: Bit de controle da bolha, instrução de ócio.
 
+## Formato das instruções
+
+| Tipo    | UC (31-27) | Rd (27-23) | R2 (23-19) | R1 (19-15)    | Shamt (15-11) | End/Imm (15-0)|
+|---------|------------|------------|------------|---------------|---------------|-------        |
+| R-Type  | 4 bits     | 4 bits     | 4 bits     | 4 bits        | -             | -             |
+| I-Type  | 4 bits     | 4 bits     | -          | 4 bits        | -             | 16 bits       |
+| J-Type  | 4 bits     | -          | -          | -             | -             | 16 bits       |
+| Branch  | 4 bits     | -          | 5 bits     | 16 bits       | -             | 16 bits       |
+| SLL     | 4 bits     | 4 bits     | 4 bits     | 4 bits        | 4 bits        | -             |
+
 ## Conclusão
 
-O projeto demonstrou com sucesso a implementação de um processador pipelined para realizar o produto de matrizes 3x3. O uso do pipelining melhorou significativamente o desempenho do processador, permitindo que várias instruções sejam executadas simultaneamente.
+O projeto demonstrou com sucesso a implementação de um processador pipeline para realizar o produto de matrizes 2x2. O uso do pipelining melhorou significativamente o desempenho do processador, permitindo que várias instruções sejam executadas simultaneamente.
