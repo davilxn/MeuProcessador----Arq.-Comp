@@ -30,6 +30,7 @@ Conjunto de registradores de propósito geral que armazenam dados temporários d
 ### Unidade Lógica e Aritmética (ULA)
 
 Realiza operações lógicas e aritméticas nos dados durante o estágio de execução (Execute) do pipeline.
+
 ![Alt text](images/ula.png)
 
 ### Memória de Dados
