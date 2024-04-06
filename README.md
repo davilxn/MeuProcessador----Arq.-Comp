@@ -20,11 +20,13 @@ O processador implementado é composto pelos seguintes componentes:
 ### Memória de Instruções
 
 Armazena o código assembly MIPS a ser executado, fornecendo instruções durante o estágio de busca (Fetch) do pipeline.
+
 ![Alt text](images/mem_inst.png)
 
 ### Banco de Registradores
 
 Conjunto de registradores de propósito geral que armazenam dados temporários durante a execução do programa.
+
 ![Alt text](images/banco_reg.png)
 
 ### Unidade Lógica e Aritmética (ULA)
@@ -36,6 +38,7 @@ Realiza operações lógicas e aritméticas nos dados durante o estágio de exec
 ### Memória de Dados
 
 Armazena dados utilizados pelo programa e é acessada durante instruções que envolvem acesso à memória.
+
 ![Alt text](images/md.png)
 
 No que diz respeito à estrutura de pipelining, este processador segue uma arquitetura pipeline clássica, dividida em cinco estágios principais:
