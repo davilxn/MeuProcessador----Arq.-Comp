@@ -118,4 +118,4 @@ O restante das colunas referem-se às saídas da UC, isto é, os sinais de contr
 
 ## Conclusão
 
-O projeto demonstrou com sucesso a implementação de um processador pipelined para realizar o produto de matrizes 3x3. O uso do pipelining melhorou significativamente o desempenho do processador, permitindo que várias instruções sejam executadas simultaneamente. O código assembly MIPS foi eficientemente projetado para ser compatível com a arquitetura do processador e produzir resultados precisos.
+O projeto demonstrou com sucesso a implementação de um processador pipelined para realizar o produto de matrizes 3x3. O uso do pipelining melhorou significativamente o desempenho do processador, permitindo que várias instruções sejam executadas simultaneamente.
